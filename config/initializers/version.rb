@@ -1,1 +1,4 @@
-VERSION = '1.0.0-alpha'
+module TestGuru
+  VERSION = '0.1.0'
+end
+TestGuru.version
