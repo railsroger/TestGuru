@@ -1,8 +1,8 @@
 class Test < ApplicationRecord
-  belongs_to :category
-  has_many :users
+  has_many :ass_tests_and_users
+  has_many :users, through: :ass_tests_and_users
 
   def self.return_tests(category)
-    self.joins(:category).where(categories: { title: category }).order(title: :desc).pluck(:title)
+    joins(:category).where(categories: { title: category }).order(title: :desc).pluck(:title)
   end
 end
