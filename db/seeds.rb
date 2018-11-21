@@ -35,7 +35,7 @@ answers = Answer.create([{ title: 'Строка - это просто облас
   клиента формате, под клиентом мы подразумеваем клиентское ПО из модели client <-> server.
   В свою очередь веб-сервисы созданные с использованием протокола HTTP и принципов REST.', question: questions[4] }])
 
-AssTests_And_User.create([{ user: users[0], test: tests[0] },
+tests_users = TestsUser.create([{ user: users[0], test: tests[0] },
                           { user: users[1], test: tests[3] },
                           { user: users[2], test: tests[1] },
                           { user: users[1], test: tests[2] }])
