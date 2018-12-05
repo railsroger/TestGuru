@@ -13,7 +13,12 @@ class QuestionsController < ApplicationController
 
   def create
     @question = @test.questions.create!(question_params)
-    render plain: "Question was successfully created"
+    if @question.save
+      render plain: "Question was successfully created"
+    else
+      render plain: "The question is not created!"
+      redirect_to new_test_question_path
+    end
   end
 
   def show
@@ -27,19 +32,19 @@ class QuestionsController < ApplicationController
 
   private
 
-    def find_question
-      @question = Question.find(params[:id])
-    end
+  def find_question
+    @question = Question.find(params[:id])
+  end
 
-    def find_test
-      @test = Test.find(params[:test_id])
-    end
+  def find_test
+    @test = Test.find(params[:test_id])
+  end
 
-    def question_params
-      params.require(:question).permit(:body)
-    end
+  def question_params
+    params.require(:question).permit(:body)
+  end
 
-    def rescue_with_question_not_found
-      render plain: "Question not found!"
-    end
+  def rescue_with_question_not_found
+    render plain: "Question not found!"
+  end
 end
