@@ -1,0 +1,52 @@
+<%= render 'shared/errors', obj: @test %>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= form_with model: @test, local: true do |f| %>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :title %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :title, id: :test_title, class: "form-control", placeholder: "Title of test", autofocus: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :level %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.number_field :level, id: :test_level, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :category_id %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.collection_select :category_id, Category.all, :id, :title, class: "form-control", prompt: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :author_id %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.collection_select :author_id, User.all, :id, class: "form-control" %>
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit class: "btn btn-primary btn-lg" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="col-xs-4 col-xs-offset-4">
+      [ <%= link_to "Cancel", tests_path %> ]
+    </div>
+  </div>
+</div>

@@ -1,23 +1,32 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index create]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[new create]
+  before_action :find_question, only: %i[edit update show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    @questions = Question.all
+  def new
+    @question = @test.questions.new
   end
 
-  def new
+  def edit
   end
 
   def create
-    @question = @test.questions.create!(question_params)
+    @question = @test.questions.new(question_params)
     if @question.save
-      render plain: "Question was successfully created"
+      flash[:success] = "Question was successfully created."
+      redirect_to @question
     else
-      render plain: "The question is not created!"
-      redirect_to new_test_question_path
+      render :new
+    end
+  end
+
+  def update
+    if @question.update(question_params)
+      flash[:success] = "Question was successfully updated."
+      redirect_to test_path(@question.test)
+    else
+      render :edit
     end
   end
 
@@ -26,8 +35,8 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    render plain: "This question has been deleted."
-    redirect_to test_question_path
+    flash[:danger] = "Question was successfully deleted."
+    redirect_to test_path(@question.test)
   end
 
   private

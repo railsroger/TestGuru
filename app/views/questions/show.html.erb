@@ -1,0 +1,10 @@
+<h2 align="center">Title: <%= @question.id %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <hr
+  <h4 class="center description"><strong>Question:</strong></h4>
+  <hr>
+  <%= @question.body %>
+  <div class="article-actions">
+    <%= link_to "Return from tests", test_path(@question.test), class: "btn btn-xs btn-success" %>
+  </div>
+</div>
