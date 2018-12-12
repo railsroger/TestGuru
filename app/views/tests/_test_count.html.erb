@@ -1,14 +1,15 @@
-<div class="row">
-  <div class="col-xs-8 col-xs-offset-2">
-    <div class="well well-lg">
-      <div class="article-title">
-        <%= link_to test.title, test_path(test) %>
-      </div>
-      <div class="article-body">
-        <%= test.level %>
-        <%= test.author_id %>
-        <%= test.questions.count %>
+<% @tests.each do |test| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        <div class="article-title">
+          <%= link_to test.title, test_path(test) %>
+        </div>
+        <div class="article-body">
+          <%= test.level %>
+          <%= test.questions.count %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>

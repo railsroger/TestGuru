@@ -29,15 +29,7 @@
           <%= f.collection_select :category_id, Category.all, :id, :title, class: "form-control", prompt: true %>
         </div>
       </div>
-
-      <div class="form-group">
-        <div class="control-label col-sm-2">
-          <%= f.label :author_id %>
-        </div>
-        <div class="col-sm-8">
-          <%= f.collection_select :author_id, User.all, :id, class: "form-control" %>
-        </div>
-      </div>
+      
       <br>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
