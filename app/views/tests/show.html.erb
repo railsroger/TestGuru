@@ -1,0 +1,12 @@
+<h2 align="center">Test: <%= @test.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <h4 class="center description"><strong>Level:<%= @test.level %></strong></h4>
+  <hr>
+  <h4 class="center description"><strong>Questions:</strong></h4>
+  <hr>
+  <%= render @test.questions %>
+  <div class="article-actions">
+    <%= link_to "View all tests", tests_path, class: "btn btn-xs btn-success" %>
+    <% link_to "New question", new_test_question_path(@test) %>
+  </div>
+</div>
