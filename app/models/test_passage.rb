@@ -5,7 +5,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question, on: %i[create update]
 
-  MIN_CORRECT_ANSWERS = 85
+  MIN_CORRECT_ANSWERS_PERCENT = 85
 
   def completed?
     current_question.nil?
