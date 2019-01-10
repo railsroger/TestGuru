@@ -20,4 +20,8 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_path
   end
+
+  def store_location
+    cookies[:current_url] = request.original_url if request.get?
+  end
 end

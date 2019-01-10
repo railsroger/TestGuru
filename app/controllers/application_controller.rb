@@ -26,7 +26,4 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
-  def store_location
-    cookies[:current_url] = request.original_url if request.get?
-  end
 end
