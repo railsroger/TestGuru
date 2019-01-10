@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
     unless current_user
       redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
     end
-
-    cookies[:email] = current_user&.email
   end
 
   def current_user
@@ -26,5 +24,9 @@ class ApplicationController < ActionController::Base
   def log_out
     session.delete(:user_id)
     @current_user = nil
+  end
+
+  def store_location
+    cookies[:current_url] = request.original_url if request.get?
   end
 end
