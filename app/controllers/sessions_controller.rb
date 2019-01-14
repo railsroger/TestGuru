@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:password])
       store_location ||= root_path
       session[:user_id] = user.id
-      redirect_to store_location || root_path
+      redirect_to store_location
     else
       flash.now[:alert] = 'Invalid email/password combination'
       render :new
