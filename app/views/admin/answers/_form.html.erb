@@ -1,6 +1,6 @@
 <%= render 'shared/errors', obj: @answer %>
 
-<%= form_with model: [@question, @answer], local: true do |form| %>
+<%= form_with model: [:admin, @question, @answer], local: true do |form| %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_area :title, id: :answer_body, rows: 7, cols: 60 %>

@@ -7,8 +7,13 @@
       <%= devise_error_messages! %>
 
       <div class="form-inputs">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name, autofocus: true %>
+      </div>
+
+      <div class="form-inputs">
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name, autofocus: true %>
       </div>
 
       <div class="form-inputs">

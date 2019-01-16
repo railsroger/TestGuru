@@ -11,12 +11,19 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def accept!(answer_ids)
+    if correct_answer?(answer_ids)
+      self.correct_questions += 1
+    end
+    save!
+  end
+
   def questions_count
     test.questions.count
   end
 
   def current_question_index
-    test.questions.index(current_question) + 1 if completed?
+    test.questions.index(current_question) + 1 unless completed?
   end
 
   def result
@@ -27,18 +34,7 @@ class TestPassage < ApplicationRecord
     result >= MIN_CORRECT_ANSWERS
   end
 
-  def accept!(answer_ids)
-    if correct_answer?(answer_ids)
-      self.correct_questions += 1
-    end
-    save!
-  end
-
   private
-
-  def before_validation_set_current_question
-    self.current_question = next_question
-  end
 
   def correct_answer?(answer_ids)
     correct_answers_count = correct_answers.count
@@ -46,12 +42,16 @@ class TestPassage < ApplicationRecord
     correct_answers_count == answer_ids.count
   end
 
+  def before_validation_set_current_question
+    self.current_question = next_question
+  end
+
   def correct_answers
     current_question.answers.correct
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    test.questions.order(:id).where('id > ?', current_question.nil? ? 0 : current_question.id).first
   end
 
 end

@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <%= form_with(model: [@test, @question], local: true) do |f| %>
+    <%= form_with(model: [:admin, @test, @question], local: true) do |f| %>
       <div class="form-group">
         <div class="control-label col-sm-2">
           <%= f.label :body %>
@@ -20,7 +20,7 @@
       </div>
     <% end %>
     <div class="col-xs-4 col-xs-offset-4">
-      [ <%= link_to "Cancel", tests_path %> ]
+      [ <%= link_to "Cancel", admin_tests_path %> ]
     </div>
   </div>
 </div>
