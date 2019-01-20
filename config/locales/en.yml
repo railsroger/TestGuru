@@ -1,6 +1,143 @@
 en:
-  hello: "Hello world"
-
+  helpers:
+    select:
+      prompt: 'Select:'
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Add Answer"
+        update: "Update Answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Question text"
+      answer:
+        body: "Answer"
+        correct: "Correct"
+  
+  layouts:
+    admin:
+      brand: "Admin Panel | TestGuru"
+    application:
+      guru: "TestGuru"
+  page:
+    index:
+      logo: "TestGuru"
+      jumbotron: "Sign Up Now"
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    footer:
+      project: "by Educational project in an online school"
+      school: "Thinknetica"
+      tests: "Tests"
+    navigation:
+      brand: "TestGuru"
+      tests: "All tests"
+      logout: "Log out"
+      welcome: "Welcom"
+      signup: "Sign Up"
+      login: "Log In"
+  test_passages:
+    result:
+      header: "The {title} Test was completed!"
+      result_test: "Result Test:"
+      correct_answer: "Correct answers:"
+      number_questions: "Number of questions:"
+      tests: "All tests"
+    show:
+      header_test: "Passing the {title} Test"
+      question_next: "Question № {id} from {title}"
+      next: "Next"
   tests:
+    test:
+      start: "Start"
     index:
       header: "All tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Action"
+  tests_mailer:
+    more: "More"
+  
+  admin:
+    nav:
+      brand: "Admin Panel | TestGuru"
+      header: "All tests"
+      new_test: "New test"
+      logout: "Log out"
+      welcome: "Welcome"
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      edit:
+        edit_answer: "Edit Answer"
+        back_to_question: "Back"
+      new:
+        new_answer: "New Answer"
+        back_to_question: "Back"
+      show:
+        answer_question: "Question"
+        answer: "Answer:"
+        correct: "Correct:"
+        back_to_question: "Back"
+    questions:
+      form:
+        cancel: "Cancel"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure you want to delete the question?"
+      edit:
+        edit: "Edit existing question."
+      new:
+        new: "Create an question."
+      show:
+        title: "Title:"
+        question: "Question:"
+        answers: "Answers:"
+        new_answer: "New answer"
+        back_to_test: "Back"
+    tests:
+      form:
+        cancel: "Cancel"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure"
+      edit:
+        edit: "Edit existing test."
+        back_to_tests: "Back"
+      index:
+        header: "All tests"
+        new_test: "New test"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        action: "Action"
+      new:
+        new: "Create an test."
+        back_to_tests: "Back"
+      show:
+        title: "Title:"
+        level: "Level:"
+        questions: "Questions"
+        new_question: "New question"
+        edit: "Edit"
+        back_to_tests: "Back"

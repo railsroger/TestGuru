@@ -9,7 +9,7 @@
           <%= f.label :body %>
         </div>
         <div class="col-sm-8">
-          <%= f.text_field :body, class: "form-control", placeholder: "Title of question", autofocus: true %>
+          <%= f.text_field :body, class: "form-control", autofocus: true %>
         </div>
       </div>
       <br>
@@ -20,7 +20,7 @@
       </div>
     <% end %>
     <div class="col-xs-4 col-xs-offset-4">
-      [ <%= link_to "Cancel", admin_tests_path %> ]
+      [ <%= link_to t('.cancel'), admin_tests_path %> ]
     </div>
   </div>
 </div>

@@ -4,8 +4,8 @@
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h2 class="panel-title">
-            <%= pluralize(obj.errors.count, "error") %>
-            prohibited this test from being saved:
+            <%= pluralize(obj.errors.count, "error") %> detected:
+            <%= t('.header', count: resource.errors.count) %>
           </h2>
           <div class="panel-body">
             <ul>

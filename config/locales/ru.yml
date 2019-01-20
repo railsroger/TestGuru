@@ -1,6 +1,144 @@
 ru:
-  hello: "Привет мир!"
-
+  helpers:
+    select:
+      prompt: 'Выберите:'
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Добавить ответ"
+        update: "Обновить ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Текст вопроса"
+      answer:
+        body: "Ответ"
+        correct: "Правильный"
+  
+  layouts:
+    admin:
+      brand: "Панель Администратора | TestGuru"
+    application:
+      guru: "TestGuru"
+  page:
+    index:
+      logo: "TestGuru"
+      jumbotron: "Зарегистрироваться"
+  shared:
+    errors:
+      header:
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+    footer:
+      project: "Образовательная онлайн школа"
+      school: "Thinknetica"
+      tests: "Тесты"
+    navigation:
+      brand: "TestGuru"
+      tests: "Все тесты"
+      logout: "Выйти"
+      welcome: "Добро пожаловать"
+      signup: "Зарегистрироваться"
+      login: "Войти"
+  test_passages:
+    result:
+      header: "Этот {title} тест был выполнен!"
+      result_test: "Результаты теста:"
+      correct_answer: "Правильных ответов:"
+      number_questions: "Номер вопроса:"
+      tests: "Все тесты"
+    show:
+      header_test: "Прохождение {title} теста"
+      question_next: "Вопрос № {id} в {title}"
+      next: "Следующий"
   tests:
+    test:
+      start: "Старт"
     index:
       header: "Все тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действие"
+  tests_mailer:
+    more: "больше"
+  
+  admin:
+    nav:
+      brand: "Панель Администратора | TestGuru"
+      header: "Все тесты"
+      new_test: "Новый тест"
+      logout: "Выйти"
+      welcome: "Добро пожаловать"
+    answers:
+      answer:
+        show: "Просмотр"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      edit:
+        edit_answer: "Редактировать ответ"
+        back_to_question: "Назад"
+      new:
+        new_answer: "Новый ответ"
+        back_to_question: "Назад"
+      show:
+        answer_question: "Вопрос"
+        answer: "Ответ:"
+        correct: "Правильных:"
+        back_to_question: "Назад"
+    questions:
+      form:
+        cancel: "Отмена"
+      question:
+        show: "Просмотр"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы действительно хотите удалить вопрос?"
+      edit:
+        edit: "Изменить существующий вопрос."
+      new:
+        new: "Создать вопрос."
+      show:
+        title: "Название:"
+        question: "Вопрос:"
+        answers: "Ответы:"
+        new_answer: "Новый ответ"
+        back_to_test: "Назад"
+    tests:
+      form:
+        cancel: "Отмена"
+      test:
+        show: "Просмотр"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      edit:
+        edit: "Изменение теста."
+        back_to_tests: "Назад"
+      index:
+        header: "Все тесты"
+        new_test: "Новый тест"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        action: "Действие"
+      new:
+        new: "Создать тест."
+        back_to_tests: "Назад"
+      show:
+        title: "Название:"
+        level: "Уровень:"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        edit: "Изменить"
+        back_to_tests: "Назад"
