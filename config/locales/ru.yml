@@ -71,6 +71,14 @@ ru:
       actions: "Действие"
   tests_mailer:
     more: "больше"
+
+  devise:
+    registrations:
+      new:
+        signup: "Регистрация"
+    sessions:
+      new:
+        login: "Вход"
   
   admin:
     nav:

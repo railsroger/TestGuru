@@ -69,8 +69,16 @@ en:
       questions: "Questions"
       actions: "Action"
   tests_mailer:
-    more: "More"
+    more: "more"
   
+  devise:
+    registrations:
+      new:
+        signup: "Sign Up"
+    sessions:
+      new:
+        login: "Log In"
+
   admin:
     nav:
       brand: "Admin Panel | TestGuru"
