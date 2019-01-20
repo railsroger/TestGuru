@@ -14,7 +14,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def create
-    @test = Test.new(test_params)
+    @test = current_user.created_tests.new(test_params)
     if @test.save
       flash[:success] = "Test was successfully created."
       redirect_to test_path(@test)
@@ -39,11 +39,6 @@ class Admin::TestsController < Admin::BaseController
     @test.destroy
     flash[:danger] = "Test was successfully deleted."
     redirect_to tests_path
-  end
-
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
   end
 
   private

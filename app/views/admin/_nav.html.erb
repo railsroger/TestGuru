@@ -7,7 +7,7 @@
         <li><%= link_to "All Tests", admin_tests_path %></li>
         <li><%= link_to "New Test", new_admin_test_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-        <li>Welcome, <b><%= current_user.fullname %></br> Guru</li>
+        <li>Welcome, <b><%= current_user.full_name %></br> Guru</li>
       </ul>
   </div>
 </nav>

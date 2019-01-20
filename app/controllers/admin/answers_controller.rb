@@ -1,6 +1,5 @@
 class Admin::AnswersController < Admin::BaseController
 
-  before_action :authenticate_user!
   before_action :find_question, only: %i[new create]
   before_action :find_answer, only: %i[show edit update destroy]
 
@@ -15,7 +14,7 @@ class Admin::AnswersController < Admin::BaseController
   end
 
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
       if @answer.save
         flash[:success] = 'Answer was successfully created.'
         redirect_to admin_question_path(@answer.question)

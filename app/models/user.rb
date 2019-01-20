@@ -23,7 +23,7 @@ class User < ApplicationRecord
     is_a?(Admin)
   end
 
-  def fullname
+  def full_name
     "#{first_name} #{last_name}"
   end
 
