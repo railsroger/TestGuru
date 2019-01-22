@@ -2,11 +2,11 @@
   <footer class="footer">
     <small>
       Copyright &copy; <%= github_url('railsroger', 'TestGuru', 'TestGuru') %> <%= current_year %>
-      by Educational project in an online school <a href="http://thinknetica.com/" target="_blank">Thinknetica</a>
+      <%= t('.project') %> <a href="http://thinknetica.com/" target="_blank"><%= t('.school') %></a>
     </small>
     <nav>
       <ul>
-        <li><%= link_to "Tests", tests_path %></li>
+        <li><%= link_to t('.tests'), tests_path %></li>
       </ul>
     </nav>
   </footer>

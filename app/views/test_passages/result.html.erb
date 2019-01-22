@@ -1,17 +1,16 @@
-<div class="row"
-  <h1>The <%= test_passage.test.title %>Test was completed!</h1>
-
-  <h2>Result Test:
+<div class="row">
+  <h1><%= t('.header', title: @test_passage.test.title ) %></h1>
+  <h2><%= t('.result_test') %>
     <span class="<%= @test_passage.success? ? 'success' : 'failed' %>">
       <%= number_to_percentage(@test_passage.result, precision: 2) %>
     </span>
   <h2>
 
   <ul>
-    <li>Correct answers: <%= @test_passage.correct_question %></li>
-    <li>Number of questions: <%= @test_passage.questions_count %></li>
+    <li><%= t('.correct_answer') %> <%= @test_passage.correct_question %></li>
+    <li><%= t('.number_questions') %> <%= @test_passage.questions_count %></li>
   </ul>
   <div class="article-actions">
-    <%= link_to 'All tests', tests_path %>
+    <%= link_to t('.tests'), tests_path %>
   </div>
 </div>

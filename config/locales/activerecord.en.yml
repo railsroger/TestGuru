@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+      question: "Question"
+      answer: "Answer"
+      category: "Category"
+      user: "User"
+      admin: "Admin"
+      test_passage: "Test passage"
+
+    attributes:
+      test:
+        title: "Title"
+      question:
+        body: "Text"
+      answer:
+        body: "Text"
+      category:
+        title: "Title"
+      user:
+        email: "E-mail"
+        type: "Type"
+        first_name: "First name"
+        last_name: "Last name"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+
+    errors:
+      messages:
+        blank: "can`t be blank"
