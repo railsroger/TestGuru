@@ -5,6 +5,9 @@
     <% if user_signed_in? %>
       <%= t('.welcom') %>, <b><%= current_user.full_name %></b> |
       <%= link_to t('.tests'), tests_path %> |
+      <% if current_user.admin? %>
+        <%=  link_to t('.admin_panel'), admin_tests_path %> |
+      <% end %>
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t('.signup'), new_user_registration_path %> |

@@ -48,6 +48,7 @@ en:
       welcome: "Welcom"
       signup: "Sign Up"
       login: "Log In"
+      admin_panel: "Admin"
   test_passages:
     result:
       header: "The {title} Test was completed!"

@@ -49,6 +49,7 @@ ru:
       welcome: "Добро пожаловать"
       signup: "Зарегистрироваться"
       login: "Войти"
+      admin_panel: "Админка"
   test_passages:
     result:
       header: "Этот {title} тест был выполнен!"
