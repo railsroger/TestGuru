@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
   <% flash.each do |type, msg| %>
-    <div class="alert <%= bootstrap_flash_messages(type) %> alert-dismissable fade show">
+    <div class="alert <%= bootstrap_flash_css(type) %> alert-dismissable fade show">
       <%= msg %>
       <button class="close" data-dismiss="alert">x</button>
     </div>

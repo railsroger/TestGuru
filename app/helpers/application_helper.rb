@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def bootstrap_flash_messages(flash_css)
+  def bootstrap_flash_css(flash_css)
 
     case flash_css
       when 'success'
