@@ -1,13 +1,9 @@
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <%= link_to t('.brand'), admin_tests_path, class: "navbar-brand" %>
-    </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t('.header'), admin_tests_path %></li>
-        <li><%= link_to t('.new_test'), new_admin_test_path %></li>
-        <li><%= link_to t('.logout'), destroy_user_session_path, method: :delete %></li>
-        <li><%= t('.welcome') %>, <b><%= current_user.full_name %></br></li>
-      </ul>
-  </div>
+<nav class="navbar navbar-light bg-light">
+  <%= link_to t('.brand'), root_path, class: "navbar-brand" %>
+  <span class="navbar-text">
+    <%= t('.welcome') %>, <b><%= current_user.full_name %></b> |
+    <%= link_to t('.header'), admin_tests_path %> |
+    <%= link_to t('.new_test'), new_admin_test_path %> |
+    <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+  </span>
 </nav>

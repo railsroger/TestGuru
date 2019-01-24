@@ -1,8 +1,16 @@
 module ApplicationHelper
 
-  def flash_messages
-    flash.map do |key, msg|
-      content_tag :p, msg, class: "flash #{key}"
-    end.join.html_safe
+  def bootstrap_flash_css(flash_css)
+
+    case flash_css
+      when 'success'
+        'alert-success'
+      when 'error'
+        'alert-danger'
+      when 'alert'
+        'alert-warning'
+    else
+      flash_css.to_s
+    end
   end
 end

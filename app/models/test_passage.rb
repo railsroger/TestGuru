@@ -27,11 +27,11 @@ class TestPassage < ApplicationRecord
   end
 
   def result
-    (self.correct_question.to_f / questions_count) * 100
+    (self.correct_questions.to_f / questions_count) * 100
   end
 
   def success?
-    result >= MIN_CORRECT_ANSWERS
+    result >= MIN_CORRECT_ANSWERS_PERCENT
   end
 
   private
@@ -39,7 +39,7 @@ class TestPassage < ApplicationRecord
   def correct_answer?(answer_ids)
     correct_answers_count = correct_answers.count
     (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-    correct_answers_count == answer_ids.count
+    (correct_answers_count == answer_ids.count if answer_ids)
   end
 
   def before_validation_set_current_question

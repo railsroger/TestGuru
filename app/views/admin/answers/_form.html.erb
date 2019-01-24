@@ -1,18 +1,18 @@
 <%= render 'shared/errors', obj: @answer %>
 
 <%= form_with model: [:admin, @question, @answer], local: true do |form| %>
-  <p>
+  <div class="form-group">
     <%= form.label :title %><br>
-    <%= form.text_area :title, id: :answer_body, rows: 7, cols: 60 %>
-  </p>
+    <%= form.text_area :title, id: :answer_body, rows: 7, cols: 60, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :correct %>
+    <%= form.check_box :correct, id: :answer_correct, class: "form-control" %>
+  </div>
+
 
   <p>
-    <%= form.label :correct %>
-    <%= form.check_box :correct, id: :answer_correct %>
+    <%= form.submit class: 'btn btn-custom2' %>
   </p>
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
