@@ -35,7 +35,7 @@ gem 'devise', '~> 4.5'
 gem 'rails-i18n', '~> 5.1', '>= 5.1.2'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'faraday'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

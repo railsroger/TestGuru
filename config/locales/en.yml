@@ -60,6 +60,9 @@ en:
       header_test: "Passing the {title} Test"
       question_next: "Question № {id} from {title}"
       next: "Next"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
   tests:
     test:
       start: "Start"

@@ -61,6 +61,9 @@ ru:
       header_test: "Прохождение {title} теста"
       question_next: "Вопрос № {id} в {title}"
       next: "Следующий"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
   tests:
     test:
       start: "Старт"
