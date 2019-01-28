@@ -36,6 +36,8 @@ gem 'rails-i18n', '~> 5.1', '>= 5.1.2'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'faraday'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'octokit', '~> 4.13'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
