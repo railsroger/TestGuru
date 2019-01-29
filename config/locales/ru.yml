@@ -62,8 +62,9 @@ ru:
       question_next: "Вопрос № {id} в {title}"
       next: "Следующий"
     gist:
-      success: "Gist успешно сохранен!"
+      success: "Gist успешно сохранен, %{url}!"
       failure: "Во время сохранения gist произошла ошибка"
+  gist_description: "%{title} вопросы от TestGuru"
   tests:
     test:
       start: "Старт"
@@ -91,6 +92,7 @@ ru:
       new_test: "Новый тест"
       logout: "Выйти"
       welcome: "Добро пожаловать"
+      admin_gists: "Gists"
     answers:
       answer:
         show: "Просмотр"
@@ -154,3 +156,11 @@ ru:
         new_question: "Новый вопрос"
         edit: "Изменить"
         back_to_tests: "Назад"
+    gists:
+      index:
+        header: "Пользовательские Gists"
+        question: "Вопрос"
+        url: "Gist ссылка"
+        user: "Е-mail пользователя"
+      gist:
+        url: "Gist ссылка"
