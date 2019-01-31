@@ -60,6 +60,10 @@ en:
       header_test: "Passing the {title} Test"
       question_next: "Question № {id} from {title}"
       next: "Next"
+    gist:
+      success: "Gist was successfully created, %{url}!"
+      failure: "An error occurred while saving gist"
+  gist_description: "The %{title} questions from TestGuru"
   tests:
     test:
       start: "Start"
@@ -87,6 +91,7 @@ en:
       new_test: "New test"
       logout: "Log out"
       welcome: "Welcome"
+      admin_gists: "Gists"
     answers:
       answer:
         show: "Show"
@@ -150,3 +155,11 @@ en:
         new_question: "New question"
         edit: "Edit"
         back_to_tests: "Back"
+    gists:
+      index:
+        header: "Users Gists"
+        question: "Question"
+        url: "Gist url"
+        user: "User email"
+      gist:
+        url: "Gist url"
