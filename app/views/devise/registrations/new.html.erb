@@ -27,12 +27,13 @@
             <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
             <% end %><br />
-            <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: 'form-control' %>
+            <%= f.password_field :password, id: "password", autocomplete: "off", placeholder: "Password", class: 'form-control', onkeyup: 'check();' %>
           </p>
 
           <p>
             <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirmation", class: 'form-control' %>
+            <%= f.password_field :password_confirmation, id: "password_confirmation", autocomplete: "off", placeholder: "Confirmation", class: 'form-control', onkeyup: 'check();' %>
+             <span id='message'></span>
           </p>
           <br>
 
