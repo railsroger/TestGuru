@@ -1,11 +1,15 @@
 <h1><%= t('header') %><h1/>
 
-<div class="row">
-  <div class="table table-sm">
+<!--<div class="row">
+  <div class="table table-sm">-->
     <table class="table">
       <thead>
         <tr>
-          <th scope="col"><%= t('.title') %></th>
+          <th class="sort-by-title pointer">
+            <%= t('.title') %>
+            <%= octicon 'arrow-up', class: 'text-success hide' %>
+            <%= octicon 'arrow-down', class: 'text-success hide' %> 
+          </th>
           <th scope="col"><%= t('.level') %></th>
           <th scope="col"><%= t('.questions') %></th>
           <th scope="col"><%= t('.actions') %></th>
@@ -13,5 +17,5 @@
       </thead>
         <%= render @tests %>
     </table>
-  </div>
-</div>
+<!--  </div>
+</div>-->
