@@ -1,0 +1,9 @@
+<div class="progress progressbar">
+  <%= content_tag :div, 
+                  '',
+                  class: 'progress-bar bg-success',
+                  id: 'progressbar',
+                  style: "height: 40px",
+                  data: { question_next: @test_passage.current_question_index,
+                          questions_count: @test_passage.questions_count } %>
+</div>

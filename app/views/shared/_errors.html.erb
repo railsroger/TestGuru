@@ -1,22 +1,23 @@
 <% if resource.present? && resource.errors.any? %>
   <%= content_tag :div, class: 'resource-errors', data: { resource_id: resource.id } do %>
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <h2 class="panel-title">
-            <%= pluralize(resource.errors.count, "error") %> detected:
-            <%= t('.header', count: resource.errors.count) %>
-          </h2>
-          <div class="panel-body">
-            <ul>
-              <% resource.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-            </ul>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+              <%= pluralize(resource.errors.count, "error") %> detected:
+              <%= t('.header', count: resource.errors.count) %>
+            </h2>
+            <div class="panel-body">
+              <ul>
+                <% resource.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
