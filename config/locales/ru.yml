@@ -156,6 +156,8 @@ ru:
         new_question: "Новый вопрос"
         edit: "Изменить"
         back_to_tests: "Назад"
+      form_inline:
+        submit: "OK"
     gists:
       index:
         header: "Пользовательские Gists"
