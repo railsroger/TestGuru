@@ -1,3 +1,8 @@
+document.addEventListener('turbolinks:load', function() {
+  password.addEventListener('keyup', checkPassword)
+  password_confirmation.addEventListener('keyup', checkPassword)
+})
+
 function checkPassword() {
 
   var password = document.getElementById('password');
@@ -10,13 +15,13 @@ function checkPassword() {
 
     password.style.backgroundColor = goodColor
     message.style.color = goodColor;
-    message.innerHTML = "Character number ok!"
+    message.textContent = "Character number ok!"
   }
   else {
 
     password.style.backgroundColor = badColor;
     message.style.color = badColor;
-    message.innerHTML = "You have to enter at least 6 digit!"
+    message.textContent = "You have to enter at least 6 digit!"
     return;
   }
 
@@ -24,14 +29,14 @@ function checkPassword() {
     
     password_confirmation.style.backgroundColor = goodColor;
     message.style.color = goodColor;
-    message.innerHTML = "matching!"
+    message.textContent = "matching!"
   }
 
   else {
     
     password_confirmation.style.backgroundColor = badColor;
     message.style.color = badColor;
-    message.innerHTML = "These password don`t match!"
+    message.textContent = "These password don`t match!"
   }
 
 }
