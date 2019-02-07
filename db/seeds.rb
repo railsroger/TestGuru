@@ -9,30 +9,35 @@
 admins = User.create!([{first_name: 'Maks', last_name: 'Aleksandrovich', email: 'admins@gmail.com', password: '5669024!A', type: 'Admin'}])
 
 users = User.create([{ first_name: 'Maks', last_name: 'Fimmel', email: 'sss@yandex.ru' },
-  { first_name: 'Egor', last_name: 'Popov', email: 'adam@yandex.ru'  }])
+                     { first_name: 'Egor', last_name: 'Popov', email: 'adam@yandex.ru'  }])
 
-categories = Category.create([{ title: 'Ruby'}, { title: 'Ruby on Rails' }, { title: 'Javascript' }, { title: 'API' }])
+categories = Category.create([{ title: 'Ruby' },
+                              { title: 'Javascript' },
+                              { title: 'Python' },
+                              { title: 'HTML' }])
 
-tests = Test.create([{ title: 'Основы Ruby', category: categories[0] },
-{ title: 'Массивы и хэши', level: 0, category: categories[0] },
-{ title: 'Классы и модули', level: 1,  category: categories[1] },
-{ title: 'RESTful API', level: 2, category: categories[2] },
-{ title: 'Components', level: 3, category: categories[2] }])
+tests = Test.create([{ title: 'OOP', category: categories.first, author_id: admins },
+             { title: 'React', level: 4, category: categories[1], author_id: admins },
+             { title: 'Bootstrap', level: 0, category: categories[3], author_id: admins },
+             { title: 'Metaprogramming', level: 5, category: categories.first, author_id: admins },
+             { title: 'Rails', level: 6, category: categories.first, author_id: admins }])
 
-questions = Question.create([{ body: 'Отличие символа от строки?', test_id: tests[0] },
-{ body: 'Отличия класса от модуля?', test_id: tests[1] },
-{ body: 'Метод добавления данных в массив?', test_id: tests[2] },
-{ body: 'В каких методах жизненного цикла стоит выполнять xhr запросы? В каких стоит «обновлять state на основе props«?', test_id: tests[3] },
-{ body: 'Что такое RESTful?', test_id: tests[4] }])
+questions = Question.create([{ body: 'What is a class?', test: tests.first },
+                             { body: 'How to inherit from another class?', test: tests.first },
+                             { body: 'Component lifecycle', test: tests[1] },
+                             { body: 'Instrument to make native apps with React', test: tests[1] },
+                             { body: 'What is metaprogramming?', test: tests[3] },
+                             { body: 'Grid structure', test: tests[2] },
+                             { body: 'How to delete database?', test: tests.last }])
 
-answers = Answer.create([{ title: 'Строка - это просто область памяти, которую вы можете изменять.
-  Символ - это просто имя. Эта конструкция очень популярна в функциональных языках
-   и обычно называется атомом - нечто неделимое и неизменное. Строка создает место в памяти, а символ нет.', question_id: questions[0] },
-{ title: 'Названием: class и module. Модуль не может иметь экземпляра класса. Модуль не имеет наследования.', question_id: questions[1] },
-{ title: 'Метод push', question_id: questions[2] },
-{ title: 'Xhr (ajax, асинхронные запросы) — нужно выполнять в момент componentDidMount
-               Обновление state, на основе props: react до версии 16.3 — componentWillReceiveProps
-               react 16.3 и выше — getDerivedStateFromProps', question_id: questions[3] },
-{ title: 'REST — это “Representational State Transfer”, другими словами — представление данных в удобном для
-  клиента формате, под клиентом мы подразумеваем клиентское ПО из модели client <-> server.
-  В свою очередь веб-сервисы созданные с использованием протокола HTTP и принципов REST.', question_id: questions[4] }])
+Answer.create([{ title: 'Class is an object and object is a class', correct: true,               question: questions.first },
+               { title: 'ComponentDidMount, ComponentWillMount, etc.', question: questions[2] },
+               { title: 'Using < symbol', correct: true, question: questions[1] },
+               { title: 'React Native', correct: true, question: questions[3] },
+               { title: 'Some magic', question: questions[4] },
+               { title: '12-column layout', correct: true, question: questions[5] },
+               { title: 'rails db:drop', correct: true, question: questions[6] }])
+
+TestPassage.create([{ user: users.first, test: tests.first },
+                    { user: users.first, test: tests[1] },
+                    { user: users.last, test: tests[4] }])
