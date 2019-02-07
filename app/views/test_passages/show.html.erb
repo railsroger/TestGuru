@@ -1,5 +1,6 @@
 <h1><%= t('.header_test', title: @test_passage.test.title) %></h1>
-<h2><%= t('.question_next', id: @test_passage.current_question_index, title: @test_passage.test.questions.count) %></h2>
+
+<%= render 'progress_bar' %>
 
 <p>
   <b><%= @test_passage.current_question.body %></b>

@@ -1,0 +1,9 @@
+<div class="progress">
+  <%= content_tag :div,
+                  '',
+                  class: 'progress-bar bg-success',
+                  role: 'progressbar',
+                  data: { current_question_index: @test_passage.current_question_index,
+                          questions_count: @test_passage.questions_count } do %>
+  <% end %>
+</div>
