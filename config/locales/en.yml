@@ -22,6 +22,9 @@ en:
       answer:
         body: "Answer"
         correct: "Correct"
+      feedback:
+        title: "Title"
+        body: "Text"
   
   layouts:
     admin:
@@ -32,6 +35,9 @@ en:
     index:
       logo: "TestGuru"
       jumbotron: "Sign Up Now"
+  feedback:
+    new:
+      submit: "Send" 
   shared:
     errors:
       header:
@@ -41,6 +47,7 @@ en:
       project: "by Educational project in an online school"
       school: "Thinknetica"
       tests: "Tests"
+      feedback: "Feedback"
     navigation:
       brand: "TestGuru"
       tests: "All tests"

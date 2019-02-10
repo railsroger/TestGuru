@@ -8,8 +8,8 @@
 
 admins = User.create!([{first_name: 'Maks', last_name: 'Aleksandrovich', email: 'admins@gmail.com', password: '5669024!A', type: 'Admin'}])
 
-users = User.create([{ first_name: 'Maks', last_name: 'Fimmel', email: 'sss@yandex.ru' },
-                     { first_name: 'Egor', last_name: 'Popov', email: 'adam@yandex.ru'  }])
+users = User.create([{ first_name: 'Maks', last_name: 'Fimmel', email: 'sss@yandex.ru', password: '1234567' },
+                     { first_name: 'Egor', last_name: 'Popov', email: 'adam@yandex.ru', password: '5669024!'  }])
 
 categories = Category.create([{ title: 'Ruby' },
                               { title: 'Javascript' },

@@ -5,6 +5,6 @@ class FeedbackMailer < Application
     @subject = feedback.title
     @message = feedback.body
 
-    mail to: Admin.first.email, from: @user.email, subject: 'Feedback TestGuru'
+    mail to: Admin.first.email, from: @user.email, subject: @subject
   end
 end
