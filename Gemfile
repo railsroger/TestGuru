@@ -6,7 +6,6 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use pg for deploy on heroku
-
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -59,19 +58,15 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'letter_opener'
-  gem 'sqlite3'
 end
 
-group :production do
-  gem 'pg'
-end
-
-group :test do
+group :test, :production do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
