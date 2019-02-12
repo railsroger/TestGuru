@@ -6,6 +6,16 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle/
+/vendor/ruby/
+/app/vendor/
+
+
+db/*.sqlite3
+/db/*.sqlite3-journal
+/log/*
+/tmp/*
+
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
