@@ -1,1 +1,1 @@
-web: bundle exec puma -C config/puma.rb
+bin/rails server -p $PORT -e $RAILS_ENV --binding 127.0.0.1
