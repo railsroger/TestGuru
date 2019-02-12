@@ -1,6 +1,5 @@
 class AddForeignKeyToTables < ActiveRecord::Migration[5.2]
   def change
-    remove_reference :tests, :author
     add_reference :tests, :author, foreign_key: { to_table: :users}
     add_foreign_key :answers, :questions
     add_foreign_key :gists, :questions
