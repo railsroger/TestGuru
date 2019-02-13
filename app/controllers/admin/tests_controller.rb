@@ -1,7 +1,7 @@
 class Admin::TestsController < Admin::BaseController
 
-  before_action :find_test, only: %i[show edit update destroy start update_inline]
   before_action :set_tests, only: %i[index update_inline]
+  before_action :find_test, only: %i[show edit update destroy start update_inline]
 
   def index
   end
@@ -17,7 +17,7 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.created_tests.new(test_params)
     if @test.save
       flash[:success] = "Test was successfully created."
-      redirect_to test_path(@test)
+      redirect_to admin_tests_path(@test)
     else
       render :new
     end
@@ -26,7 +26,7 @@ class Admin::TestsController < Admin::BaseController
   def update
     if @test.update(test_params)
       flash[:success] = "Test was successfully updated."
-      redirect_to test_path(@test)
+      redirect_to admin_tests_path(@test)
     else
       render 'edit'
     end

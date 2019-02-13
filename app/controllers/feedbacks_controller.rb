@@ -9,7 +9,7 @@ class FeedbacksController < ApplicationController
     @feedback = current_user.feedbacks.new(feedback_params)
 
     if @feedback.save
-      FeedbacksMailer.send_feedback(@feedback).deliver_now
+      FeedbackMailer.send_feedback(@feedback).deliver_now
       redirect_to root_path, alert: t('.success')
     else
       render :new, alert: t('.failed')
@@ -19,6 +19,6 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:user, :title, :body)
+    params.require(:feedback).permit(:title, :body)
   end
 end
