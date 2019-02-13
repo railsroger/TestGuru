@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-admins = User.create!([{first_name: 'Maks', last_name: 'Aleksandrovich', email: 'railstest@gmail.com', password: 'R20118!', type: 'Admin'}])
+admins = User.create!([{first_name: 'Maks', last_name: 'Aleksandrovich', email: 'railsroger@gmail.com', password: 'Rabbit20118!', type: 'Admin'}])
 
 users = User.create([{ first_name: 'Maks', last_name: 'Fimmel', email: 'sss@yandex.ru', password: '1234567' },
                      { first_name: 'Egor', last_name: 'Popov', email: 'adam@yandex.ru', password: '5669024!'  }])
