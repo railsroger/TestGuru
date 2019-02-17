@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
   resources :feedbacks, only: %i[new create]
+  resources :badges, only: :index
 
   resources :tests, only: :index do
     member do
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges
   end
 
 end
