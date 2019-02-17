@@ -1,7 +1,5 @@
-<%= render 'shared/errors', resource: @feedback %>
-
 <%= form_with model: @feedback, local: true do |f| %>
-      
+  <%= render 'shared/errors', resource: @feedback %>      
   <%= f.label :title %>       
   <%= f.text_field :title, id: :feedback_title, class: "form-control", autofocus: true %><br>
    
