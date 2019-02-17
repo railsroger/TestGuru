@@ -1,25 +1,21 @@
-<%= render 'shared/errors', obj: @test %>
 
-    <%= form_with model: [:admin, @test], local: true do |f| %>
+<%= form_with model: [:admin, @test], local: true do |f| %>
+  <%= render 'shared/errors', resource: @test %>
       
-          <%= f.label :title %>
-        
-          <%= f.text_field :title, id: :test_title, class: "form-control", autofocus: true %><br>
+    <%= f.label :title %>        
+    <%= f.text_field :title, id: :test_title, class: "form-control", autofocus: true %><br>
    
-     
-          <%= f.label :level %>
-        
-          <%= f.number_field :level, id: :test_level, class: "form-control" %><br>
+    <%= f.label :level %>   
+    <%= f.number_field :level, id: :test_level, class: "form-control" %><br>
        
-          <%= f.label :category_id %>
+    <%= f.label :category_id %>   
+    <%= f.collection_select :category_id, Category.all, :id, :title, class: "form-control", prompt: true %>
+    <br>
+    <br>
+    <%= f.submit class: "btn-custom2" %>
         
-          <%= f.collection_select :category_id, Category.all, :id, :title, class: "form-control", prompt: true %>
-          <br>
-          <br>
-          <%= f.submit class: "btn-custom2" %>
-        
-    <% end %>
-       <br>
+<% end %>
+    <br>
     
-       <%= link_to t('.cancel'), admin_tests_path, class: 'btn btn-custom' %> 
+<%= link_to t('.cancel'), admin_tests_path, class: 'btn btn-custom' %> 
    

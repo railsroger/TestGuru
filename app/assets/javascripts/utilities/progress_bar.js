@@ -5,7 +5,7 @@ document.addEventListener('turbolinks:load', function() {
     let currentQuestionIndex = progressBar.dataset.currentQuestionIndex
     let questionsCount = progressBar.dataset.questionsCount
 
-    let percentage = (((currentQuestionIndex - 1) / questionsCount) * 100) + '%'
+    let percentage = Math.round((((currentQuestionIndex - 1) / questionsCount) * 100)) + '%'
 
     progressBar.style.width = percentage;
     progressBar.textContent = percentage;

@@ -1,0 +1,12 @@
+<%= form_with model: @feedback, local: true do |f| %>
+  <%= render 'shared/errors', resource: @feedback %>      
+  <%= f.label :title %>       
+  <%= f.text_field :title, id: :feedback_title, class: "form-control", autofocus: true %><br>
+   
+     
+  <%= f.label :body %>      
+  <%= f.text_area :body, id: :feedback_body, class: "form-control" %><br>
+  <br>
+  <%= f.submit class: "btn btn-custom" %>
+        
+<% end %>

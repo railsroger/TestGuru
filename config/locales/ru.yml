@@ -22,6 +22,9 @@ ru:
       answer:
         body: "Ответ"
         correct: "Правильный"
+      feedback:
+        title: "Название"
+        body: "Содержание"
   
   layouts:
     admin:
@@ -32,6 +35,9 @@ ru:
     index:
       logo: "TestGuru"
       jumbotron: "Зарегистрироваться"
+  feedback:
+    new:
+      submit: "Отправить"
   shared:
     errors:
       header:
@@ -42,6 +48,7 @@ ru:
       project: "Образовательная онлайн школа"
       school: "Thinknetica"
       tests: "Тесты"
+      feedback: "Обратная связь"
     navigation:
       brand: "TestGuru"
       tests: "Все тесты"

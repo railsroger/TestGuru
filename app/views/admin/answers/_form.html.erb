@@ -1,6 +1,7 @@
-<%= render 'shared/errors', obj: @answer %>
+
 
 <%= form_with model: [:admin, @question, @answer], local: true do |form| %>
+  <%= render 'shared/errors', resource: @answer %>
   <div class="form-group">
     <%= form.label :title %><br>
     <%= form.text_area :title, id: :answer_body, rows: 7, cols: 60, class: "form-control" %>
