@@ -2,6 +2,8 @@ class Badge < ApplicationRecord
   has_many :users_badges
   has_many :users, through: :users_badges
 
+  validates :title, :image, presence: true
+
   def self.images
     images_path = 'app/assets/images/'
     badges = Dir.glob("#{images_path}badges/*")

@@ -12,6 +12,9 @@ en:
       answer:
         create: "Add Answer"
         update: "Update Answer"
+      badge:
+        create: "Create badge"
+        update: "Update"
     label:
       test:
         title: "Title"
@@ -25,6 +28,10 @@ en:
       feedback:
         title: "Title"
         body: "Text"
+      badge:
+        title: "Title"
+        image: "Image"
+        rule: "Rule"
   
   layouts:
     admin:
@@ -135,6 +142,7 @@ en:
         add_achiv: "Add badge"
       new:
         new_achiv: "New badge"
+        back_to_tests: "Back"
     questions:
       form:
         cancel: "Cancel"

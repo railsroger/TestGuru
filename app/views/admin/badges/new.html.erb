@@ -1,3 +1,9 @@
-<h3><%= t('.new_achiv') %></h3>
+<div class="col-md-6 col-md-offset-3">
+  <div class="new-book-form">
 
-<%= render 'form' %>
+    <h1 align="center"><%= t('.new_achiv') %></h1>
+
+    <%= render 'form' %>
+    <%= link_to t('.back_to_tests'), admin_tests_path, class: 'btn btn-custom' %>
+  </div>
+</div>

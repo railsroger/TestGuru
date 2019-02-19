@@ -12,6 +12,9 @@ ru:
       answer:
         create: "Добавить ответ"
         update: "Обновить ответ"
+      badge:
+        create: "Добавить значок"
+        update: "Обновить"
     label:
       test:
         title: "Название"
@@ -25,6 +28,10 @@ ru:
       feedback:
         title: "Название"
         body: "Содержание"
+      badge:
+        title: "Заголовок"
+        image: "Картинка"
+        rule: "Правило"
   
   layouts:
     admin:
@@ -136,6 +143,7 @@ ru:
         add_achiv: "Добавить значок"
       new:
         new_achiv: "Новый значок"
+        back_to_tests: "Назад"
     questions:
       form:
         cancel: "Отмена"
