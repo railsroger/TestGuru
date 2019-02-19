@@ -44,6 +44,7 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+        few: "мало"
     footer:
       project: "Образовательная онлайн школа"
       school: "Thinknetica"

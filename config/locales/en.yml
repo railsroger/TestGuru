@@ -43,6 +43,7 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+        few: "few"
     footer:
       project: "by Educational project in an online school"
       school: "Thinknetica"
