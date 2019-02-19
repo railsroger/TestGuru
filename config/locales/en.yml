@@ -56,6 +56,7 @@ en:
       signup: "Sign Up"
       login: "Log In"
       admin_panel: "Admin"
+      achievements: "Badges"
   test_passages:
     result:
       header: "The {title} Test was completed!"
@@ -82,7 +83,11 @@ en:
       actions: "Action"
   tests_mailer:
     more: "more"
-  
+  badges:
+    index:
+      achievements: "Achievements"
+      all_badges: "All badges"
+
   devise:
     registrations:
       new:
@@ -99,6 +104,7 @@ en:
       logout: "Log out"
       welcome: "Welcome"
       admin_gists: "Gists"
+      achievements: "Badges"
     answers:
       answer:
         show: "Show"
@@ -116,6 +122,18 @@ en:
         answer: "Answer:"
         correct: "Correct:"
         back_to_question: "Back"
+    badges:
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      edit:
+        edit_achiv: "Edit badge"
+      index:
+        achievements: "Achievements"
+        add_achiv: "Add badge"
+      new:
+        new_achiv: "New badge"
     questions:
       form:
         cancel: "Cancel"

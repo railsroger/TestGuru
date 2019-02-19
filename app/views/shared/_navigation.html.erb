@@ -5,6 +5,7 @@
     <% if user_signed_in? %>
       <%= t('.welcom') %>, <b><%= current_user.full_name %></b> |
       <%= link_to t('.tests'), tests_path %> |
+      <%= link_to t('.achievements'), badges_path, class: :btn %> |
       <% if current_user.admin? %>
         <%=  link_to t('.admin_panel'), admin_tests_path %> |
       <% end %>

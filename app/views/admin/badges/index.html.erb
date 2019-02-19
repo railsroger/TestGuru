@@ -1,0 +1,14 @@
+<div class="row justify-content-center mt-3 ">
+  <div class="col col-md-8">
+    <h3><%= t('.achievements') %></h3>
+
+    <table class="table table-hover">
+      <%= render partial: 'admin/badges/badge', collection: @badges %>
+    </table>
+
+    <div class="text-center">
+      <%= link_to t('.add_achiv'), new_admin_badge_path, class: 'btn btn-outline-success btn-sm' %>
+    </div>
+
+  </div>
+</div>
