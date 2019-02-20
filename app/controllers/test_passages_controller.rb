@@ -25,7 +25,11 @@ class TestPassagesController < ApplicationController
   end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    if checking_timer
+      @test_passage.completed?
+    else
+      @test_passage.accept!(params[:answer_ids])
+    end
 
     if @test_passage.completed?
       BadgeRules.new(@test_passage).call
@@ -45,6 +49,12 @@ class TestPassagesController < ApplicationController
 
   def create_gist!(gist_url)
     current_user.gists.create(question: @test_passage.current_question, url: gist_url.html_url)
+  end
+
+  def checking_timer
+    if @test_passage.test.timer && @test_passage.overtime?(@test_passage.end_time)
+      redirect_to result_test_passage_path(@test_passage)
+    end
   end
 
 end

@@ -88,6 +88,7 @@ en:
       title: "Title"
       level: "Level"
       questions: "Questions"
+      timer: "Time"
       actions: "Action"
   tests_mailer:
     more: "more"
@@ -178,6 +179,7 @@ en:
         title: "Title"
         level: "Level"
         questions: "Questions"
+        timer: "Time"
         action: "Action"
       new:
         new: "Create an test."
