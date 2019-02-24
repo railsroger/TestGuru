@@ -14,7 +14,7 @@
 
     <p>
       <%= form.label :rule %>
-      <%= form.select :rule, options_for_select([['category_complete'],['first_try'],['level_complete'],]), class: 'form-control'%> 
+      <%= form.select :rule, options_for_select(Badge::BADGES_AWARD), class: 'form-control'%> 
     </p>
 
     <p><%= form.submit class: 'btn-custom2' %></p>

@@ -33,7 +33,7 @@ class TestPassagesController < ApplicationController
     end
 
     if @test_passage.completed?
-      BadgeRules.new(@test_passage).call
+      BadgesAwardService.new(@test_passage).call
 
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
