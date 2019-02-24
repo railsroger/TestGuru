@@ -39,7 +39,9 @@ class TestPassage < ApplicationRecord
   end
 
   def overtime?(end_time)
-    Time.current > end_time
+    if @test_passage.test.timer.present?  
+      Time.current > end_time
+    end
   end
 
   def end_time
