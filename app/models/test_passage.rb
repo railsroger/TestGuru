@@ -38,8 +38,8 @@ class TestPassage < ApplicationRecord
     completed? && success?
   end
 
-  def overtime?(end_time)
-    if @test_passage.test.timer.present?  
+  def overtime?
+    if  test.timer.present?  
       Time.current > end_time
     end
   end
