@@ -1,4 +1,4 @@
-class BadgeRules
+class BadgesAwardService
 
   def initialize(test_passage)
     @test_passage = test_passage
@@ -6,16 +6,10 @@ class BadgeRules
     @test = test_passage.test
   end
 
+  
   def call
     Badge.all.each do |badge|
-      case badge.rule
-      when 'category_complete'
-        reward(badge) if category_complete?(badge)
-      when 'first_try'
-        reward(badge) if first_try?
-      when 'level_complete'
-        reward(badge) if level_complete?(badge)
-      end
+      reward(badge) if send("#{badge.rule}?", badge.level || badge.category)
     end
   end
 
