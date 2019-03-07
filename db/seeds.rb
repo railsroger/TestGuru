@@ -46,3 +46,11 @@ Answer.create([{ title: 'Class is an object and object is a class', correct: tru
 TestPassage.create([{ user: users.first, test: tests.first },
                     { user: users.first, test: tests[1] },
                     { user: users.last, test: tests[4] }])
+
+badges = Badge.create([
+  { title: 'complete successfully back-end test', rule: 'category_complete'},
+  { title: 'complete successfully full-stack test', rule: 'category_complete'},
+  { title: 'complete successfully for the first try', rule: 'first_try'},
+  { title: 'complete successfully the 1-st level test', rule: 'level_complete'},
+  { title: 'complete successfully the 2-nd level test', rule: 'level_complete'},
+])

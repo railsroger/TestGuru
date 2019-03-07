@@ -12,6 +12,9 @@ ru:
       answer:
         create: "Добавить ответ"
         update: "Обновить ответ"
+      badge:
+        create: "Добавить значок"
+        update: "Обновить"
     label:
       test:
         title: "Название"
@@ -25,6 +28,10 @@ ru:
       feedback:
         title: "Название"
         body: "Содержание"
+      badge:
+        title: "Заголовок"
+        image: "Картинка"
+        rule: "Правило"
   
   layouts:
     admin:
@@ -44,6 +51,7 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+        few: "мало"
     footer:
       project: "Образовательная онлайн школа"
       school: "Thinknetica"
@@ -57,6 +65,7 @@ ru:
       signup: "Зарегистрироваться"
       login: "Войти"
       admin_panel: "Админка"
+      achievements: "Значки"
   test_passages:
     result:
       header: "Этот {title} тест был выполнен!"
@@ -83,6 +92,10 @@ ru:
       actions: "Действие"
   tests_mailer:
     more: "больше"
+  badges:
+    index:
+      achievements: "Достижения"
+      all_badges: "Все значки"
 
   devise:
     registrations:
@@ -100,6 +113,7 @@ ru:
       logout: "Выйти"
       welcome: "Добро пожаловать"
       admin_gists: "Gists"
+      achievements: "Значки"
     answers:
       answer:
         show: "Просмотр"
@@ -117,6 +131,19 @@ ru:
         answer: "Ответ:"
         correct: "Правильных:"
         back_to_question: "Назад"
+    badges:
+      badge:
+        edit: "Изменить"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      edit:
+        edit_achiv: "Редактировать значок"
+      index:
+        achievements: "Достижения"
+        add_achiv: "Добавить значок"
+      new:
+        new_achiv: "Новый значок"
+        back_to_tests: "Назад"
     questions:
       form:
         cancel: "Отмена"

@@ -1,0 +1,22 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <div class="form-group">
+  <%= render 'shared/errors', resource: @badge %>
+
+    <p>
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.label :image %>
+      <%= form.select :image, options_for_select(Badge.images), prompt: true, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.label :rule %>
+      <%= form.select :rule, options_for_select(Badge::BADGES_AWARD), class: 'form-control'%> 
+    </p>
+
+    <p><%= form.submit class: 'btn-custom2' %></p>
+  </div>
+<% end %>

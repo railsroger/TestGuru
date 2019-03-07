@@ -34,6 +34,10 @@ class TestPassage < ApplicationRecord
     result >= MIN_CORRECT_ANSWERS_PERCENT
   end
 
+  def successfully?
+    completed? && success?
+  end
+
   private
 
   def correct_answer?(answer_ids)

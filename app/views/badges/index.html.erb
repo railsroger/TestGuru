@@ -1,0 +1,17 @@
+<div class="row justify-content-center mt-3 ">
+  <div class="col col-md-8">
+
+    <h3><%= t('.achievements') %></h3>
+
+    <table class="table table-hover">
+      <%= render partial: 'badges/badge', collection: @current_badges %>
+    </table>
+
+    <h3><%= t('.all_badges') %></h3>
+
+    <table class="table table-hover">
+      <%= render partial: 'badges/badge', collection: @badges %>
+    </table>
+
+  </div>
+</div>
