@@ -9,7 +9,7 @@ class BadgesAwardService
   
   def call
     Badge.all.each do |badge|
-      reward(badge) if send("#{badge.rule}?", badge.level || badge.category)
+      reward(badge) if send("#{badge.rule}?", badge.rule_value)
     end
   end
 
@@ -24,15 +24,15 @@ class BadgesAwardService
   end
 
   def category_complete?(category)
-    successful_test? && @test.category.title == category
+    successful_test? && @user.tests.where("category_id = ?", category_id).uniq.count == Test.where("category_id = ?", category_id).count
   end
 
   def first_try?
-    successful_test? && @user.tests.where(id: @test.id).count == 1
+    successful_test? && @user.tests.where("title = ?", @test_passage.test.title).count == 1
   end
 
   def level_complete?(level)
-    successful_test? && @test.level == level
+    successful_test? && @user.tests.where("level = ?", level).uniq.count == Test.where("level = ?", level).count
   end
 
 end

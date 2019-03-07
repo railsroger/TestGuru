@@ -16,11 +16,11 @@ categories = Category.create([{ title: 'Ruby' },
                               { title: 'Python' },
                               { title: 'HTML' }])
 
-tests = Test.create([{ title: 'OOP', category: categories.first, author_id: admins },
-             { title: 'React', level: 4, category: categories[1], author_id: admins },
-             { title: 'Bootstrap', level: 0, category: categories[3], author_id: admins },
-             { title: 'Metaprogramming', level: 5, category: categories.first, author_id: admins },
-             { title: 'Rails', level: 6, category: categories.first, author_id: admins }])
+tests = Test.create([{ title: 'OOP', category: categories.first, author_id: admins, timer: 200 },
+             { title: 'React', level: 4, category: categories[1], author_id: admins, timer: 900 },
+             { title: 'Bootstrap', level: 0, category: categories[3], author_id: admins, timer: 100 },
+             { title: 'Metaprogramming', level: 5, category: categories.first, author_id: admins, timer: 70 },
+             { title: 'Rails', level: 6, category: categories.first, author_id: admins, timer: 340 }])
 
 questions = Question.create([{ body: 'What is a class?', test: tests.first },
                              { body: 'What is a module?', test: tests.first },

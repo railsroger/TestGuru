@@ -38,6 +38,16 @@ class TestPassage < ApplicationRecord
     completed? && success?
   end
 
+  def overtime?
+    if  test.timer.present?  
+      Time.current > end_time
+    end
+  end
+
+  def end_time
+    created_at + test.timer.minutes
+  end
+
   private
 
   def correct_answer?(answer_ids)
